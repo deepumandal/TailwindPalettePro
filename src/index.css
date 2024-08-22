@@ -1,68 +1,57 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    /* Light theme colors */
+    --primary-light: #1d4ed8; /* Blue */
+    --secondary-light: #10b981; /* Green */
+    --thitiary-light: #6b7280; /* Gray */
+    --confirm-light: #3b82f6; /* Light Blue */
+    --alert-light: #f59e0b; /* Amber */
+    --warning-light: #fbbf24; /* Yellow */
+    --error-light: #ef4444; /* Red */
+    --destructive-light: #dc2626; /* Dark Red */
+    --background-light: #f3f4f6; /* Light Gray */
+    --heading-light: #111827;
+
+    /* Dark theme colors */
+    --primary-dark: #60a5fa; /* Light Blue */
+    --secondary-dark: #34d399; /* Light Green */
+    --thitiary-dark: #9ca3af; /* Light Gray */
+    --confirm-dark: #93c5fd; /* Pale Blue */
+    --alert-dark: #fbbf24; /* Yellow */
+    --warning-dark: #fde047; /* Light Yellow */
+    --error-dark: #f87171; /* Light Red */
+    --destructive-dark: #f87171; /* Light Red */
+    --background-dark: #111827; /* Very Dark Gray */
+    --heading-dark: #f3f4f6;
+
+    /* Default to light theme values */
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --thitiary: var(--thitiary-light);
+    --confirm: var(--confirm-light);
+    --alert: var(--alert-light);
+    --warning: var(--warning-light);
+    --error: var(--error-light);
+    --destructive: var(--destructive-light);
+    --background: var(--background-light);
+    --heading: var(--heading-light);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+
+  /* Dark theme overrides */
+  .dark {
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+    --thitiary: var(--thitiary-dark);
+    --confirm: var(--confirm-dark);
+    --alert: var(--alert-dark);
+    --warning: var(--warning-dark);
+    --error: var(--error-dark);
+    --destructive: var(--destructive-dark);
+    --background: var(--background-dark);
+    --heading: var(--heading-dark);
   }
 }
