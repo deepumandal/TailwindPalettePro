@@ -1,25 +1,26 @@
-# TailwindPalettePro
+# 🌈 TailwindPalettePro
 
 **TailwindPalettePro** is a comprehensive guide that combines CSS variables with Tailwind CSS, enabling developers to create stunning UIs with precise control over colors in both light and dark modes. It offers clear examples and best practices, making it simple to manage and customize color schemes for your next project.
 
 ---
 ## ![Image Example](./src/thumbhnail.png)
 ---
-## Table of Contents
+## 📚 Table of Contents
 
-- [Features](#features)
-- [Concept](#concept)
-- [How to Use](#how-to-use)
+- [✨ Features](#-features)
+- [💡 Concept](#-concept)
+- [🛠️ How to Use](#-how-to-use)
   - [1. Define Your Colors](#1-define-your-colors)
   - [2. Extend Tailwind Config](#2-extend-tailwind-config)
   - [3. Apply Colors in HTML/JSX](#3-apply-colors-in-htmljsx)
   - [4. Switch Themes](#4-switch-themes)
-- [Contribution](#contribution)
-- [License](#license)
+- [🤝 Contribution](#-contribution)
+- [📜 License](#-license)
+
 
 ---
 
-## Features
+## ✨ Features
 - **CSS Variables Integration**: Seamlessly integrate CSS variables for color management.
   - background 
   - primary 
@@ -33,7 +34,8 @@
 
 ---
 
-## Concept
+## 💡 Concept
+
 TailwindPalettePro utilizes CSS variables to define colors in a consistent pattern: `{variable}-light` for light mode and `{variable}-dark` for dark mode. These variables are then applied globally using `:root` for the default light mode and `.dark` for dark mode overrides.
 
 ### Example CSS Setup
@@ -89,7 +91,7 @@ TailwindPalettePro utilizes CSS variables to define colors in a consistent patte
 
 ---
 
-## How to Use
+## 🛠️ How to Use
 
 ### 1. Define Your Colors
 Start by defining your colors using CSS variables. Place these within the :root selector for the light theme and within the .dark class for the dark theme.
@@ -247,10 +249,10 @@ This setup lets users easily toggle between light, dark, and system modes, enhan
 
 ---
 
-### Contribution
+### 🤝 Contribution
 We welcome contributions to improve this guide! Feel free to submit a pull request or open an issue with suggestions or improvements.
 
 ---
 
-### License
+### 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
