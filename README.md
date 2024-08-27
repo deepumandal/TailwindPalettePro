@@ -38,9 +38,14 @@
 
 TailwindPalettePro utilizes CSS variables to define colors in a consistent pattern: `{variable}-light` for light mode and `{variable}-dark` for dark mode. These variables are then applied globally using `:root` for the default light mode and `.dark` for dark mode overrides.
 
+---
+
+## 🛠️ How to Use
+
+### 1. Define Your Colors
+Start by defining your colors using CSS variables. Place these within the :root selector for the light theme and within the .dark class for the dark theme.
+
 ### Example CSS Setup
-
-
 ```css
 @tailwind base;
 @tailwind components;
@@ -64,11 +69,14 @@ TailwindPalettePro utilizes CSS variables to define colors in a consistent patte
   }
 }
 ```
+
 > By using this setup, TailwindPalettePro allows you to easily switch between light and dark themes. The primary color automatically adapts to the active theme, while giving you manual control over the light and dark mode variants through primary-light and primary-dark.
+
 
 ---
 
-### Example Tailwind Config Extension
+### 2. Extend Tailwind Config
+Next, extend the Tailwind CSS configuration file to incorporate these variables. This makes the colors available throughout your project as Tailwind utilities.
 
 ```javascript
   module.exports = {
@@ -81,52 +89,6 @@ TailwindPalettePro utilizes CSS variables to define colors in a consistent patte
           dark: "var(--primary-dark)",
         },
         // Add more colors as needed
-      },
-    },
-  },
-};
-
-```
-> 💡 Tip: This pattern ensures that when you use the primary color variable, it automatically applies the correct color based on the current theme. Additionally, you have full control over light and dark mode colors with primary-light and primary-dark.
-
----
-
-## 🛠️ How to Use
-
-### 1. Define Your Colors
-Start by defining your colors using CSS variables. Place these within the :root selector for the light theme and within the .dark class for the dark theme.
-```css
-:root {
-  --primary-light: #1d4ed8;
-  --secondary-light: #10b981;
-}
-
-.dark {
-  --primary-dark: #60a5fa;
-  --secondary-dark: #34d399;
-}
-```
----
-
-### 2. Extend Tailwind Config
-Next, extend the Tailwind CSS configuration file to incorporate these variables. This makes the colors available throughout your project as Tailwind utilities.
-
-```javascript
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          DEFAULT: "var(--primary)",
-          light: "var(--primary-light)",
-          dark: "var(--primary-dark)",
-        },
-        secondary: {
-          DEFAULT: "var(--secondary)",
-          light: "var(--secondary-light)",
-          dark: "var(--secondary-dark)",
-        },
       },
     },
   },
